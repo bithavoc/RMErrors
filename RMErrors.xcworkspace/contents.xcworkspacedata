@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:RMErrors"
+      name = "RMErrors">
+      <FileRef
+         location = "group:RMErrorCodeBoundary.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorCodeDefinition.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorCodeDefinition.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorCodeRangeBoundary.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorCodeRangeBoundary.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorCodes.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorCodes.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorDescription.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorDescription.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorDomainDefinition.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorDomainDefinition.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorDomains.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorDomains.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrors.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrors.m">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorTransformation.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorTransformations.h">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrorTransformations.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Tests/RMErrorsTests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Tests/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

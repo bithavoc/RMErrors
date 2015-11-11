@@ -1,0 +1,20 @@
+xcodeproj 'RMErrorsTests'
+workspace '../RMErrors'
+inhibit_all_warnings!
+
+def common_pods
+  pod 'RMErrors', :path => '../'
+end
+
+target :ios do
+  platform :ios, '7.0'
+  link_with 'RMErrorsIOSTests'
+  common_pods
+end
+
+target :osx do
+  platform :osx, '10.9'
+  link_with 'RMErrorsOSXTests'
+  common_pods
+end
+
