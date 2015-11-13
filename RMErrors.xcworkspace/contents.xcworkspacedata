@@ -2,6 +2,19 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "container:"
+      name = "Misc">
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <FileRef
+         location = "group:LICENSE">
+      </FileRef>
+      <FileRef
+         location = "group:RMErrors.podspec">
+      </FileRef>
+   </Group>
+   <Group
       location = "container:RMErrors"
       name = "RMErrors">
       <FileRef

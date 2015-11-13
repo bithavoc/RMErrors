@@ -14,6 +14,7 @@
 
 extern NSString *const RMErrorsContentDomainsKey;
 extern NSString *const RMErrorsContentDefaultKey;
+extern NSString *const RMErrorsDefaultFileName;
 
 @interface RMErrors : NSObject
 
@@ -35,7 +36,19 @@ extern NSString *const RMErrorsContentDefaultKey;
 /**
  Load from parsed RMErrors.plist
  */
-- (void)load:(NSDictionary *)content;
+- (void)load:(nonnull NSDictionary *)content;
+
+/*
+ Loads from property list in the main bundle
+ */
+- (void)loadPropertyList;
+
+/*
+ Load the content of RMErrors with Property List
+ @param name Name of the property list in the bundle. Can not be nil.
+ @param bundle Bundle to load the property list from. Can not be nil.
+ */
+- (void)loadPropertyList:(nonnull NSString *)name bundle:(nonnull NSBundle *)bundle;
 
 /**
  Process an error and returns a description

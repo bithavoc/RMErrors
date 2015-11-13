@@ -24,6 +24,8 @@
 		1E9597D31BF2FAFC004C4851 /* RMErrorDomainsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E84A7E71BF29F2000D1532C /* RMErrorDomainsTest.m */; };
 		1E9597D41BF2FAFC004C4851 /* RMErrorsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E84A7E91BF29F2000D1532C /* RMErrorsTest.m */; };
 		1E9597D51BF2FAFC004C4851 /* RMErrorsTransformationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E84A7EA1BF29F2000D1532C /* RMErrorsTransformationTest.m */; };
+		1EFF20BB1BF63963002A65C1 /* RMErrors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EFF20BA1BF63963002A65C1 /* RMErrors.plist */; };
+		1EFF20BC1BF63966002A65C1 /* RMErrors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EFF20BA1BF63963002A65C1 /* RMErrors.plist */; };
 		5525CEEDC150C468C8DF5683 /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA1BC800683D1E509E11F3E /* libPods-ios.a */; };
 		BB7CD182732BEBE7C717E0B7 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7B757FF1A5FF486760FE18 /* libPods-osx.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,7 @@
 		1E9597C71BF2FAEA004C4851 /* RMErrorsOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMErrorsOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9597C91BF2FAEA004C4851 /* RMErrorsOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMErrorsOSXTests.m; sourceTree = "<group>"; };
 		1E9597CB1BF2FAEA004C4851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFF20BA1BF63963002A65C1 /* RMErrors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RMErrors.plist; sourceTree = "<group>"; };
 		35578B838AB067E90CF97C5D /* Pods-osx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.release.xcconfig"; path = "Pods/Target Support Files/Pods-osx/Pods-osx.release.xcconfig"; sourceTree = "<group>"; };
 		7767EB1B31CE7690808120B9 /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		8D7B757FF1A5FF486760FE18 /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,7 @@
 		1E84A7E21BF29ECD00D1532C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1EFF20B91BF63908002A65C1 /* Fixtures */,
 				1E84A7E31BF29F2000D1532C /* RMErrorCodeDefinitionTest.m */,
 				1E84A7E41BF29F2000D1532C /* RMErrorCodeRangeBoundaryTest.m */,
 				1E84A7E51BF29F2000D1532C /* RMErrorCodesTest.m */,
@@ -133,6 +137,14 @@
 				1E9597CB1BF2FAEA004C4851 /* Info.plist */,
 			);
 			path = RMErrorsOSXTests;
+			sourceTree = "<group>";
+		};
+		1EFF20B91BF63908002A65C1 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				1EFF20BA1BF63963002A65C1 /* RMErrors.plist */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		AFDD49766CA6D337187962F0 /* Pods */ = {
@@ -228,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFF20BB1BF63963002A65C1 /* RMErrors.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFF20BC1BF63966002A65C1 /* RMErrors.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

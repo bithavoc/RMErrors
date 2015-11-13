@@ -10,6 +10,7 @@
 
 NSString *const RMErrorsContentDomainsKey = @"domains";
 NSString *const RMErrorsContentDefaultKey = @"(default)";
+NSString *const RMErrorsDefaultFileName = @"RMErrors";
 
 @implementation RMErrors
 
@@ -36,6 +37,20 @@ NSString *const RMErrorsContentDefaultKey = @"(default)";
         return description;
     }
     return self.defaultDescription;
+}
+
+- (void)loadPropertyList {
+    [self loadPropertyList:RMErrorsDefaultFileName bundle:[NSBundle mainBundle]];
+}
+
+- (void)loadPropertyList:(NSString *)name bundle:(NSBundle *)bundle {
+    NSString *path = [bundle pathForResource:name ofType:@"plist"];
+    NSDictionary *content = [NSDictionary dictionaryWithContentsOfFile:path];
+    if(!content) {
+        NSString *reason = [NSString stringWithFormat:@"Unable to load %@.plist", name];
+        [[NSException exceptionWithName:@"RMErrorsConfigFileException" reason:reason userInfo:nil] raise];
+    }
+    [self load:content];
 }
 
 @end

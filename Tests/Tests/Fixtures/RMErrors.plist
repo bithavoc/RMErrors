@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>(default)</key>
+	<dict>
+		<key>code</key>
+		<integer>-1</integer>
+		<key>friendlyMessage</key>
+		<string>Oopss, something went wrong</string>
+	</dict>
+	<key>domains</key>
+	<dict>
+		<key>NSURLErrorDomain</key>
+		<dict>
+			<key>(default)</key>
+			<dict>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>codes</key>
+			<dict>
+				<key>-1003..-1009</key>
+				<dict>
+					<key>transient</key>
+					<true/>
+					<key>friendlyMessage</key>
+					<string>the connection failed because the device is not connected to the internet</string>
+				</dict>
+				<key>-1001</key>
+				<dict>
+					<key>transient</key>
+					<true/>
+					<key>friendlyMessage</key>
+					<string>The connection timed out, please make sure you&apos;re connected to the internet and try again</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
