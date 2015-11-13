@@ -26,6 +26,12 @@
     XCTAssertEqual(errors.domains.definitions.count, 1);
 }
 
+- (void)testLoadPropertyList {
+    RMErrors *errors = [[RMErrors alloc] init];
+    [errors loadPropertyList:RMErrorsDefaultFileName bundle:[NSBundle bundleForClass:self.class]];
+    XCTAssertEqual(errors.domains.definitions.count, 1);
+}
+
 - (void)testDescribe {
     RMErrors *errors = [[RMErrors alloc] init];
     RMErrorDomainDefinition *errorDomain = [[RMErrorDomainDefinition alloc] initWithName:@"com.foo.bar.oopsie"];
