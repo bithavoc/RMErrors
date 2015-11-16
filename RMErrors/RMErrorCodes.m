@@ -17,13 +17,14 @@
 
 @implementation RMErrorCodes
 @dynamic definitions;
+@synthesize codes;
 
 - (instancetype)init {
     return [self initWithDictionary:nil];
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)domains {
-    if(self = [super init]) {
+    if((self = [super init])) {
         self.codes = [NSMutableArray array];
     }
     return self;

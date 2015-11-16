@@ -6,32 +6,32 @@
 //  Copyright (c) 2015 Ride. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "RMErrorDomains.h"
 #import "RMErrorDescription.h"
 #import "RMErrorTransformations.h"
 #import "RMErrorCodes.h"
 
-extern NSString *const RMErrorsContentDomainsKey;
-extern NSString *const RMErrorsContentDefaultKey;
-extern NSString *const RMErrorsDefaultFileName;
+extern NSString *__nonnull const RMErrorsContentDomainsKey;
+extern NSString *__nonnull const RMErrorsContentDefaultKey;
+extern NSString *__nonnull const RMErrorsDefaultFileName;
 
 @interface RMErrors : NSObject
 
 /**
  Error Domain definitions
  */
-@property (nonatomic, readonly) RMErrorDomains* domains;
+@property (nonatomic, nonnull, readonly) RMErrorDomains* domains;
 
 /**
  A collection of transformation to run prior describing the original error.
  */
-@property (nonatomic, readonly) RMErrorTransformations *transformations;
+@property (nonatomic, nonnull, readonly) RMErrorTransformations *transformations;
 
 /**
  Default error description in case is not found in domains and errors.
  */
-@property (nonatomic) RMErrorDescription *defaultDescription;
+@property (nonatomic, nullable) RMErrorDescription *defaultDescription;
 
 /**
  Load from parsed RMErrors.plist
@@ -53,6 +53,6 @@ extern NSString *const RMErrorsDefaultFileName;
 /**
  Process an error and returns a description
  */
-- (RMErrorDescription *)describe:(NSError *)error;
+- (nullable RMErrorDescription *)describe:(nonnull NSError *)error;
 
 @end

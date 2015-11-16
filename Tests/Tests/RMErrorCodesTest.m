@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "RMErrorCodes.h"
-#import "RMErrorCodeRangeBoundary.h"
+#import <RMErrors/RMErrorCodes.h>
+#import <RMErrors/RMErrorCodeRangeBoundary.h>
 
 @interface RMErrorCodesTest : XCTestCase {
     NSDictionary *_content;

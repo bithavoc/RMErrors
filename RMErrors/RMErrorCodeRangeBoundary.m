@@ -13,13 +13,15 @@ NSInteger const RMErrorCodeRangeBoundaryDefaultLimit = -1;
 static NSString *const RMErrorCodeRangeBoundaryPatternSeparator = @"..";
 
 @implementation RMErrorCodeRangeBoundary
+@synthesize upperLimit = _upperLimit;
+@synthesize lowerLimit = _lowerLimit;
 
 - (instancetype)init {
     return [self initWithLower:RMErrorCodeRangeBoundaryDefaultLimit andUpper:RMErrorCodeRangeBoundaryDefaultLimit];
 }
 
 - (instancetype)initWithLower:(NSInteger)lower andUpper:(NSInteger)upper {
-    if(self = [super init]) {
+    if((self = [super init])) {
         _lowerLimit = lower;
         _upperLimit = upper;
     }
@@ -27,7 +29,7 @@ static NSString *const RMErrorCodeRangeBoundaryPatternSeparator = @"..";
 }
 
 - (BOOL)matches:(NSInteger)code {
-    return code >= _lowerLimit && code <= _upperLimit;
+    return code >= self.lowerLimit && code <= self.upperLimit;
 }
 
 + (instancetype)boundaryWithPattern:(NSString *)pattern {

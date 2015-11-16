@@ -17,13 +17,14 @@
 
 @implementation RMErrorDomains
 @dynamic definitions;
+@synthesize domains;
 
 - (instancetype)init {
     return [self initWithDictionary:nil];
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)domains {
-    if(self = [super init]) {
+    if((self = [super init])) {
         self.domains = [NSMutableArray array];
     }
     return self;

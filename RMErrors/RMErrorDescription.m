@@ -13,16 +13,16 @@ NSString *const RMErrorDescriptionContentTransientKey = @"transient";
 NSString *const RMErrorDescriptionContentCodeKey = @"code";
 
 @implementation RMErrorDescription
+@synthesize transient = _transient;
+@synthesize friendlyMessage = _friendlyMessage;
+@synthesize code = _code;
 
 - (instancetype)init {
-    if(self = [self initWithFriendlyMessage:nil transient:NO code:-1]) {
-        
-    }
-    return self;
+    return [self initWithFriendlyMessage:nil transient:NO code:-1];
 }
 
 - (instancetype)initWithFriendlyMessage:(NSString *)friendlyMessage transient:(BOOL)transient code:(NSInteger)code {
-    if(self = [super init]) {
+    if((self = [super init])) {
         _friendlyMessage = friendlyMessage;
         _transient = transient;
         _code = code;
