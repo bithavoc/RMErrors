@@ -14,13 +14,16 @@ static NSString *const RMErrorDomainDefinitionContentCodesKey = @"codes";
 static NSString *const RMErrorDomainDefinitionContentDefaultCodeKey = @"(default)";
 
 @implementation RMErrorDomainDefinition
+@synthesize name = _name;
+@synthesize codes = _codes;
+@synthesize defaultCode = _defaultCode;
 
 - (instancetype)init {
     return [self initWithName:nil];
 }
 
 - (instancetype)initWithName:(NSString *)name {
-    if(self = [super init]) {
+    if((self = [super init])) {
         NSParameterAssert(name);
         _name = name;
         _codes = [[RMErrorCodes alloc] init];

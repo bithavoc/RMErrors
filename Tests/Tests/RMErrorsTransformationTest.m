@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "RMErrorTransformations.h"
+#import <RMErrors/RMErrorTransformations.h>
 
 @interface RMTestHelloErrorTransformation : NSObject<RMErrorTransformation>
 
@@ -15,8 +15,9 @@
 
 @implementation RMTestHelloErrorTransformation
 
-- (NSError *)transform:(NSError *)original {
-    if([@"hello" isEqualToString:original.userInfo[@"msg"]]) {
+- (NSError *)transform:(nonnull NSError *)original {
+    NSString *msg = original.userInfo[@"msg"];
+    if([@"hello" isEqualToString:msg]) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:original.userInfo];
         userInfo[@"msg"] = [original.userInfo[@"msg"] stringByAppendingString:@" world"];
         return [NSError errorWithDomain:original.domain code:original.code userInfo:userInfo];

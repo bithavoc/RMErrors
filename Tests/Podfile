@@ -1,13 +1,13 @@
 xcodeproj 'RMErrorsTests'
 workspace '../RMErrors'
-inhibit_all_warnings!
+use_frameworks!
 
 def common_pods
   pod 'RMErrors', :path => '../'
 end
 
 target :ios do
-  platform :ios, '7.0'
+  platform :ios, '8.0'
   link_with 'RMErrorsIOSTests'
   common_pods
 end

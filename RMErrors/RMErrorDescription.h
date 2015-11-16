@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Ride. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 extern NSString *const RMErrorDescriptionContentFriendlyMessageKey;
 extern NSString *const RMErrorDescriptionContentTransientKey;

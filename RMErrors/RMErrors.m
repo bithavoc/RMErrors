@@ -13,9 +13,12 @@ NSString *const RMErrorsContentDefaultKey = @"(default)";
 NSString *const RMErrorsDefaultFileName = @"RMErrors";
 
 @implementation RMErrors
+@synthesize domains = _domains;
+@synthesize transformations = _transformations;
+@synthesize defaultDescription = _defaultDescription;
 
 - (instancetype)init {
-    if(self = [super init]) {
+    if((self = [super init])) {
         _domains = [[RMErrorDomains alloc] init];
         _transformations = [[RMErrorTransformations alloc] init];
     }
@@ -30,7 +33,7 @@ NSString *const RMErrorsDefaultFileName = @"RMErrors";
     }
 }
 
-- (RMErrorDescription *)describe:(NSError *)error {
+- (nullable RMErrorDescription *)describe:(NSError *)error {
     NSError *transformed = [self.transformations transform:error];
     RMErrorDescription *description = [self.domains describe:transformed];
     if(description) {

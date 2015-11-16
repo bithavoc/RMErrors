@@ -13,6 +13,9 @@ static NSString *const RMErrorCodeDefinitionAttributeFriendlyMessageName= @"frie
 static NSString *const RMErrorCodeDefinitionAttributeTransientName= @"transient";
 
 @implementation RMErrorCodeDefinition
+@synthesize boundary = _boundary;
+@synthesize friendlyMessage = _friendlyMessage;
+@synthesize transient = _transient;
 
 - (instancetype)init {
     return [self initWithBoundary:nil friendlyMessage:nil transient:NO];
@@ -20,7 +23,7 @@ static NSString *const RMErrorCodeDefinitionAttributeTransientName= @"transient"
 
 - (instancetype)initWithBoundary:(id<RMErrorCodeBoundary>)boundary
                  friendlyMessage:(NSString *)friendlyMessage transient:(BOOL)transient {
-    if(self = [super init]) {
+    if((self = [super init])) {
         NSParameterAssert(boundary);
         _boundary = boundary;
         _friendlyMessage = friendlyMessage;
