@@ -40,7 +40,7 @@ The following example RMErrors.plist will setup RMErrors to:
 			</dict>
 			<key>codes</key>
 			<dict>
-				<key>-1003..-1009</key>
+				<key>-1009..-1003</key>
 				<dict>
 					<key>transient</key>
 					<true/>
